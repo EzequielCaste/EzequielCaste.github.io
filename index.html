@@ -8,25 +8,64 @@
 <body>
 <div class="ui container"></div>
 	<div class="ui raised very padded text container segment">
-		<h2>Temparatura Actual</h2>
+		<h2>Temperatura Actual</h2>
+
+		<div>
+		  <input autocomplete="off" onchange=change() type="radio" id="cel" name="unit" value="C"
+		         checked>
+		  <label for="cel">°C</label>
+		</div>
+
+		<div>
+		  <input autocomplete="off" onchange=change() type="radio" id="fah" name="unit" value="F">
+		  <label for="fah">°F</label>
+		</div>
 			<span id="ciudad"></span>
-			<span id="temperatura"></span>°C
+			<span id="temperatura"></span>°<span id="FC">C</span>
 			<div id="imagen"></div>
 	</div>		
 
 <script type="text/javascript">
-	let lat, lon;
+
+	function change(){
+
+		let unidad = document.getElementById("FC")
+		let temperatura = document.getElementById("temperatura")
+
+		//console.log(unidad, temperatura)
+
+		if(unidad.innerText === "C"){
+
+			//(0°C × 9/5) + 32 = 32°F
+			temperatura.innerText = (temperatura.innerText*9/5)+32
+			unidad.innerText = "F"
+
+			//console.log(unidad, temperatura)
+		} else {
+			//(32°F − 32) × 5/9 = 0°C
+			document.getElementById("temperatura").innerText = (temperatura.innerText-32)*(5/9)
+			unidad.innerText = "C"
+			//console.log(unidad, temperatura)
+		}
+
+		
+	}
+
+	let lat, lon, unidad;
 	let ciudad = document.getElementById('ciudad');
 	let temperatura = document.getElementById("temperatura")
 	let imagen = document.getElementById("imagen")
 	
 	if ("geolocation" in navigator) {
 		/* geolocation is available */
+		
+
 		navigator.geolocation.getCurrentPosition(function(position) {
 		lat = position.coords.latitude
 		lon = position.coords.longitude
-		//console.log(lat,lon)
-		let url = "https://api.weatherbit.io/v2.0/current?lat="+lat+"&lon="+lon+"&key=2dfd464c6ff5426c863f53196846a228"
+
+		console.log(lat,lon)
+		let url = "https://api.weatherbit.io/v2.0/current?lat="+lat+"&lon="+lon+"&key=2dfd464c6ff5426c863f53196846a228&units="+unidad
 
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
@@ -37,10 +76,14 @@
 		      temperatura.innerText = parsedData.data[0].temp		      
 		      imagen.innerHTML = '<img style="height: 40px;" src="https://www.weatherbit.io/static/img/icons/'+parsedData.data[0].weather.icon+'.png">'
 
+		      console.log(parsedData.data[0].temp)
+
 		    }
 		  };
 		  xhttp.open("GET", url, true);
 		  xhttp.send();
+
+
 		
 
 		  
@@ -48,6 +91,7 @@
 });
 } else {
   /* geolocation IS NOT available */
+  
 }
 </script>
 </body>
