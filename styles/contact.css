@@ -1,0 +1,18 @@
+
+
+main {
+  height: 80vh;
+}
+.contact-links {  
+  margin: 3em auto;
+  font-size: 2em;
+}
+.contact-links a {
+  margin-right: 15px;
+}
+
+#contact {
+  
+  text-align: center;
+}
+

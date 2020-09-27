@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-  <script src="https://unpkg.com/feather-icons"></script>  
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/contact.css">
   
   <title>Ezequiel Castellanos - Freelance Web Developer</title>
 </head>
@@ -19,7 +20,7 @@
       <nav id="menu">
         <a href="about.html">About</a>
         <a href="portfolio.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a class="active" href="#contact">Contact</a>
       </nav>
 
       <a href="javascript:void(0);" class="icon" onclick="hide()">
@@ -27,29 +28,19 @@
     </div>
   </header>
 
-  <section id="about" >
-    <img src="https://i.imgur.com/Xk53ZQ1.jpg" alt="">
-    <h1>
-      Hi, I'm Ezequiel
-    </h1>
-    <p>
-      A Freelance Web Developer 
-    </p>
-    <div class="buttons">
-      <a href="about.html">About me</a>
-      <a href="portfolio.html">Portfolio</a>
-    </div>
-  </section> 
-      
-
-  <section id="contact">     
+  <main>
+    <h1>Contact me</h1>
+    <section id="contact">     
     <div class="contact-links">
-      <a href="https://twitter.com/Ezequiel_Caste" target="_blank"><i class="fab fa-twitter"></i></a>
+
       <a href="mailto:ezequiel.caste@gmail.com" target="_blank"><i class="far fa-envelope"></i></i></a>      
-      <a href="https://github.com/EzequielCaste" target="_blank"><i class="fab fa-github"></i></a> 
-      <a href="https://codepen.io/ezequiel_/" id="profile-link" target="_blank"><i class="fab fa-codepen"></i></a>           
-    </div>  
+      <a href="https://twitter.com/Ezequiel_Caste" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://codepen.io/ezequiel_/" id="profile-link" target="_blank"><i class="fab fa-codepen"></i></a>
+      <a href="https://github.com/EzequielCaste" target="_blank"><i class="fab fa-github"></i></a>      
+    </div>      
   </section> 
+        
+  </main>
 
   <footer>
     <span>
@@ -62,6 +53,7 @@
 
 
 </div>
+
 <script>
   feather.replace();
 </script>
