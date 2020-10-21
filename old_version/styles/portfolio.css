@@ -1,0 +1,48 @@
+main {
+  max-width: 640px;
+  width: 90%;
+}
+.project-grid {
+  margin-bottom: 2em;
+}
+.project-card {
+  display: flex;
+  margin-bottom: 1em;
+  min-height: 170px;
+  border-bottom: 2px solid var(--alt);
+}
+.right img {
+  max-height: 150px;
+  max-width: 200px;
+  margin-bottom: 0.5em;
+}
+.project-title {
+  margin-top: 0;
+}
+.project-links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.right {
+ width: 50%;
+}
+.right div {
+  display: flex;
+  justify-content: center;
+}
+.left {  
+  width: 50%;
+}
+
+footer {
+  margin: 0;
+}
+@media (max-width: 350px) {
+  .project-card p {    
+    letter-spacing: normal;
+    width: 90%;
+  }
+}
+
