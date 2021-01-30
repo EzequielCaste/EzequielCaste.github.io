@@ -102,7 +102,7 @@ export const Navbar = () => {
                 type="button"
                 className="button is-white is-medium has-text-weight-semibold"
               >
-                <a download="" href="https://github.com/EzequielCaste/CV/raw/main/Castellanos_Ezequiel.pdf" className="has-text-black">
+                <a download="" href="https://github.com/EzequielCaste/CV/raw/main/Ezequiel%20Castellanos%20Resume.pdf" className="has-text-black">
                   <p>CV</p>
                 </a>
               </button>
