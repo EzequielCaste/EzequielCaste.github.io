@@ -2,15 +2,15 @@ import React from 'react';
 import './navbar.css';
 
 const showHide = () => {
-  const navBurger = document.querySelector('.navbar-burger');   
+  const navBurger = document.querySelector('.navbar-burger');
   const menu = document.querySelector('.dropdown-menu');
   navBurger.classList.toggle('is-active');
   menu.classList.toggle('is-active');
 }
 
-const scrollTo = (el) => {  
-   const element = document.querySelector(el);
-   element.scrollIntoView({ behavior: 'smooth' });
+const scrollTo = (el) => {
+  const element = document.querySelector(el);
+  element.scrollIntoView({ behavior: 'smooth' });
 }
 
 const handleBurgerClick = (e) => {
@@ -68,7 +68,7 @@ export const Navbar = () => {
                   type="button"
                   className="button is-white is-medium has-text-weight-semibold"
                 >
-                  <a download="" href="https://github.com/EzequielCaste/CV/raw/main/Castellanos_Ezequiel.pdf" className="has-text-black">
+                  <a download="" href="https://github.com/EzequielCaste/CV/raw/main/Ezequiel%20Castellanos%20Resume.pdf" className="has-text-black">
                     <p>CV</p>
                   </a>
                 </button>
@@ -85,7 +85,7 @@ export const Navbar = () => {
                 type="button"
                 className="button is-white is-medium has-text-weight-semibold"
               >
-              <p>Projects</p>
+                <p>Projects</p>
               </button>
             </li>
             <li className="navbar-item">
